@@ -1,4 +1,4 @@
-# Disparity Estimation in Stereo Images
+# Introduction to Deep Learning Project Repo
 
 ## How to Run the Code
 
@@ -8,7 +8,8 @@ Running the code is simplified by use of a python notebook. All that is required
 
 1. [Baseline Model](Models/Baseline/11785_ProjMidterm_Baseline.ipynb)
 2. [Other Modified Model Architectures](Models/Modified/11785_ProjMidterm_Parameter_Reduction.ipynb)
-3. [Utils](Utils)
+3. [Utils](Utils/plot_util.py)
+4. [Data](Utils/data)
 
 ## PSMNet Literature Replication 
 
@@ -26,11 +27,11 @@ Three main modification to the architecture of the model were also tested.
 
 These modifications to the literature PSMNet model all reached the same minima (at differing amounts of Epochs).  Figures for the changes in loss and accuracy are shown below in Figure 2 and Figure 3.  
 
-![L1 Loss](./Images/L1_loss.png)
+![L1 Loss](./Images/L1_loss.png)*L1 Loss Experiments*
 
 
 
-![Accuracy](./Images/Accuracy.png)
+![Accuracy](./Images/Accuracy.png)*3-pixel Accuracy Experiments*
 
 
 
