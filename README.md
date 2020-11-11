@@ -48,12 +48,11 @@ Three main modification to the architecture of the model were also tested.
 3. Asymmetric Convolutions when the kernal size was large. 
 
 These modifications to the literature PSMNet model all reached the same minima (at differing amounts of Epochs).  Figures for the changes in loss and accuracy are shown below in Figure 4 and Figure 5.  
+             Training                                              |                                        Validation
+:-------------------------:|:-------------------------:
+![L1 Loss](./Images/L1_loss.png)*Figure 4: L1 Loss Experiments*  |  ![Accuracy](./Images/Accuracy.png)*Figure 5: 3-pixel Accuracy Experiments*
 
-![L1 Loss](./Images/L1_loss.png)*Figure 4: L1 Loss Experiments*
 
-
-
-![Accuracy](./Images/Accuracy.png)*Figure 5: 3-pixel Accuracy Experiments*
 
 
 
