@@ -8,7 +8,7 @@ Running the code is simplified by use of a python notebook. All that is required
 
 1. [Baseline Model](Models/Baseline/11785_ProjMidterm_Baseline.ipynb)
 2. [Other Modified Model Architectures](Models/Modified/11785_ProjMidterm_Parameter_Reduction.ipynb)
-3. [Utils]()
+3. [Utils](Utils)
 
 ## PSMNet Literature Replication 
 
