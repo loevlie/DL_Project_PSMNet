@@ -42,7 +42,10 @@ Asymmetric Convolutions                                                         
 :-------------------------:|:-------------------------:
 ![Spatial Factorization Figure](./Images/Spatial_Factorization.png)*Mini-network replacing the 3x3 convolutions [[2]](#2)*  |  ![Parameter_Reduction Figure](./Images/Parameter_Reduction.png)*Comparison between the original and the modified architecture with asymmetric convolutions*
 
- 
+## Future work and Timeline
+From the preliminary experiments discussed above, we propose updating the timeline as follows. From 11/10 to 11/17 we plan to complete implementing a more efficient stacked hourglass version of PSMNet that achieves competitive performance on the disparity estimation problem given RGB images. Using the stacked hourglass version, we also plan to conduct preliminary experiments on IR stereo images and compare the results with those of RGB stereo images. From 11/17 - 11/24 we plan to implement architectural changes within the stacked hourglass model to improve performance on IR images. Ideally, the design modifications should enhance the model's capabilities on IR data without affecting the performance on RGB stereo images. We reserve the remaining time after 11/24 until the preliminary report submission deadline of 12/8 to continue refining and improving the performance of the modified stacked hourglass model we develop. The updated timeline is summarized in Figure 6 below.
+
+![Gantt Chart Figure](./Images/Gantt_Chart.png)*Timeline for the remainder of the Deep Learning Project*
 
 ## References
 <a id="1">[1]</a> 
