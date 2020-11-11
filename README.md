@@ -32,7 +32,7 @@ The asymmetric convolutions idea was based on the paper "Rethinking the Inceptio
 
 ## References
 <a id="1">[1]</a> 
-Jia{-}Ren Chang and Yong{-}Sheng Chen (2018). 
+Jia.-Ren Chang and Yong.-Sheng Chen (2018). 
 Pyramid Stereo Matching Network
 CoRR, abs/1803.08669, http://arxiv.org/abs/1803.08669
 
