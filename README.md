@@ -1,4 +1,4 @@
-# Introduction to Deep Learning Project Repo
+# Disparity Estimation in Stereo Images
 
 ## How to Run the Code
 
@@ -26,11 +26,11 @@ Three main modification to the architecture of the model were also tested.
 
 These modifications to the literature PSMNet model all reached the same minima (at differing amounts of Epochs).  Figures for the changes in loss and accuracy are shown below in Figure 2 and Figure 3.  
 
-![L1 Loss](./Images/L1_loss.png)*L1 Loss Experiments*
+![L1 Loss](./Images/L1_loss.png)
 
 
 
-![Accuracy](./Images/Accuracy.png)*3-pixel Accuracy Experiments*
+![Accuracy](./Images/Accuracy.png)
 
 
 
