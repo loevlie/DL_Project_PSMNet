@@ -2,7 +2,13 @@
 
 ## How to Run the Code
 
-After installing any dependencies you may need go to the [Baseline Model](Models/Baseline/11785_ProjMidterm_Baseline.ipynb) and run each cell in order in the notebook.  The training should take about 11 and a half hours.  The accuracies and model will be saved automatically every 10 epochs.
+Running the code is simplified by use of a python notebook. All that is required is to run each cell in the [Baseline Model notebook](Models/Baseline/11785_ProjMidterm_Baseline.ipynb). The training should take about 11 and a half hours for 100 epochs. The accuracies and model will be saved automatically every 10 epochs.
+
+## Model Code
+
+1. [Baseline Model](Models/Baseline/11785_ProjMidterm_Baseline.ipynb)
+2. [Other Modified Model Architectures](Models/Modified/11785_ProjMidterm_Parameter_Reduction.ipynb)
+3. [Utils]()
 
 ## PSMNet Literature Replication 
 
@@ -35,13 +41,6 @@ Asymmetric Convolutions                                                         
 :-------------------------:|:-------------------------:
 ![Spatial Factorization Figure](./Images/Spatial_Factorization.png)*Mini-network replacing the 3x3 convolutions [[2]](#2)*  |  ![Parameter_Reduction Figure](./Images/Parameter_Reduction.png)*Comparison between the original and the modified architecture with asymmetric convolutions*
 
-
-
-## Model Code
-
-1. [Baseline Model](Models/Baseline/11785_ProjMidterm_Baseline.ipynb)
-2. [Other Modified Model Architectures](Models/Modified/11785_ProjMidterm_Parameter_Reduction.ipynb)
-3. [Utils]()
  
 
 ## References
