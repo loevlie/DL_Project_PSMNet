@@ -5,6 +5,8 @@ A PSMNet model was developed based on the literature [[1]](#1).  This was used t
 
 ![](./Images/Architecture_PSMNet.png)*PSMNet Baseline  Architecture*
 
+## Experimental Modifications made to the Baseline Model from [[1]](#1)
+
 Three main modification to the architecture of the model were also tested. 
 
 1. Less Convolutional layers
