@@ -1,4 +1,9 @@
-# Introduction to Deep Learning Project Repo.
+# Introduction to Deep Learning Project Repo
+
+## How to Run the Code
+
+After installing any dependencies you may need go to the [Baseline Model](Models/Baseline/11785_ProjMidterm_Baseline.ipynb) and run each cell in order in the notebook.  The training should take about 11 and a half hours.  The accuracies and model will be saved automatically every 10 epochs.
+
 ## PSMNet Literature Replication 
 
 A PSMNet model was developed based on the literature [[1]](#1).  This was used to generate disparity maps and they were tested based on the training L1 loss and validation 3-pixel accuracy.  The baseline PSMNet architecture from [[1]](#1) is shown in Figure 1.  
@@ -37,10 +42,7 @@ Asymmetric Convolutions                                                         
 1. [Baseline Model](Models/Baseline/11785_ProjMidterm_Baseline.ipynb)
 2. [Other Modified Model Architectures](Models/Modified/11785_ProjMidterm_Parameter_Reduction.ipynb)
 3. [Utils]()
-
-## How to Run the Code
-
-After installing any dependencies you may need go to the [Baseline Model](Models/Baseline/11785_ProjMidterm_Baseline.ipynb) and run each cell in order in the notebook.  The training should take about 11 and a half hours.  The accuracies and model will be saved automatically every 10 epochs.  
+ 
 
 ## References
 <a id="1">[1]</a> 
