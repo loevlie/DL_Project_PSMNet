@@ -1,4 +1,4 @@
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/12HqIZU1Za0C5vCKly7O7Zaq8-SlwYTZy?authuser=1#scrollTo=6FqqN0gjYTqd)
+[
 # Introduction to Deep Learning Project Repo
 
 ## How to Run the Code
