@@ -1,15 +1,17 @@
+
 # Introduction to Deep Learning Project Repo
 
 ## How to Run the Code
 
-Running the code is simplified by use of a python notebook. All that is required is to run each cell in the [Baseline Model notebook](Models/Baseline/11785_ProjMidterm_Baseline.ipynb). The training should take about 11 and a half hours for 100 epochs for the baseline model. The accuracies and model will be saved automatically every 10 epochs.
+Running the code is simplified by use of a python notebook. All that is required is to run each cell in the [Baseline Model notebook](Models/Baseline/11785_ProjMidterm_Baseline.ipynb). The training should take about 11 and a half hours for 100 epochs. The accuracies and model will be saved automatically every 10 epochs.
 
 ## Model Code
 
-1. [Baseline Model](Models/Baseline/11785_ProjMidterm_Baseline.ipynb)
-2. [Other Modified Model Architectures](Models/Modified/11785_ProjMidterm_Parameter_Reduction.ipynb)
-3. [Utils](Utils/plot_util.py)
-4. [Data](Utils/data)
+1. [Final Model](Models/Final/psmreimp_ir(1).ipynb)
+2. [Baseline Model](Models/Baseline/11785_ProjMidterm_Baseline.ipynb)
+3. [Other Modified Model Architectures](Models/Modified/11785_ProjMidterm_Parameter_Reduction.ipynb)
+4. [Utils](Utils/plot_util.py)
+5. [Data](Utils/data)
 
 ## PSMNet Literature Replication 
 
