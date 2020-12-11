@@ -1,4 +1,3 @@
-[
 # Introduction to Deep Learning Project Repo
 
 ## How to Run the Code
