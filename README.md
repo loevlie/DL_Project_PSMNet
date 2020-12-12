@@ -76,15 +76,13 @@ Asymmetric Convolutions                                                         
 # Final Model (SPP Module Modifications)
 Using the insight gained from the aforementioned IR experiments, we redesigned the SPP module of PSMNet using residual blocks as shown in Figure 10 such that performance could be improved on IR images. The modifications described in this section, while tested primarily on IR images, may be applicable to RGB images as well. However, for the sake of this work we consider the architecture’s performance on the more challenging problem of IR disparity estimation.
 
-Similar to PSMNet, we first perform spatial pooling at scales4×4,8×8,16×16, and32×32. Theoutputs of each spatial pooling operation are sent to a convolutional block (CB) whose architecture isprovided in Figure 9a. Specifically CB1 accepts 3 feature maps from the provided image and outputs 32 feature maps. The outputs from CB1 are passed to a series of 4 identity blocks. The design of each identity block (IB) is shown in Figure 11b. Note that the number of feature maps is unchanged by the identity block. The outputs of the identity block are passed through another set of convolutional (CB2) and identity (IB2) blocks. In the figure, CB2 accepts 32 feature maps and outputs 64 maps.  The outputs from each spatial pooling branch are upsampled to a common size, concatenated, and passed through a final set of convolutional and identity modules.  In Figure 10, CB3 takes in 512 feature maps and outputs 128 maps, while CB4 contains 64 filters. The final Conv layer contains 32 filters and performs a convolution with kernel size and stride both set to 1×1.
+Similar to PSMNet, we first perform spatial pooling at scales4×4,8×8,16×16, and32×32. Theoutputs of each spatial pooling operation are sent to a convolutional block (CB) whose architecture isprovided in Figure 11a. Specifically CB1 accepts 3 feature maps from the provided image and outputs 32 feature maps. The outputs from CB1 are passed to a series of 4 identity blocks. The design of each identity block (IB) is shown in Figure 11b. Note that the number of feature maps is unchanged by the identity block. The outputs of the identity block are passed through another set of convolutional (CB2) and identity (IB2) blocks. In the figure, CB2 accepts 32 feature maps and outputs 64 maps.  The outputs from each spatial pooling branch are upsampled to a common size, concatenated, and passed through a final set of convolutional and identity modules.  In Figure 10, CB3 takes in 512 feature maps and outputs 128 maps, while CB4 contains 64 filters. The final Conv layer contains 32 filters and performs a convolution with kernel size and stride both set to 1×1.
 
 ![](./Images/spp_mod.png)*Figure 10: Modified SPP Module*
 
-![](./Images/conv_block.png)*Convolutional Block (CB) Diagram: N, M are the number of incoming and outgoing feature maps respectively*
-![](./Images/identity_block.png)*Identity Block (IB) Diagram: N is the number of incoming feature maps*
+![](./Images/conv_block.png)*Figure 11a: Convolutional Block (CB) Diagram: N, M are the number of incoming and outgoing feature maps respectively*
+![](./Images/identity_block.png)*Figure 11b: Identity Block (IB) Diagram: N is the number of incoming feature maps*
 
-
-Figure 11: Diagrams of convolutional blocks (CB) and identity blocks (IB) used in the modified SPP module
 
 
 ## References
