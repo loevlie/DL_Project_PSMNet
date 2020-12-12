@@ -80,17 +80,12 @@ Similar to PSMNet, we first perform spatial pooling at scales4×4,8×8,16×16, a
 
 ![](./Images/spp_mod.png)*Figure 10: Modified SPP Module*
 
-<table>
-  <tr>
-    <td>Convolutional Block (CB) Diagram: N, M are the number of incoming and outgoing feature maps respectively</td>
-     <td>Identity Block (IB) Diagram: N is the number of incoming feature maps</td>
-  </tr>
-  <tr>
-    <td><img src="./Images/conv_block.png" width=600 height=400></td>
-    <td><img src="./Images/identity_block.png" width=600 height=400></td> 
-  </tr>
- </table>
+![](./Images/conv_block.png)*Convolutional Block (CB) Diagram: N, M are the number of incoming and outgoing feature maps respectively*
+![](./Images/identity_block.png)*Identity Block (IB) Diagram: N is the number of incoming feature maps*
+
+
 Figure 11: Diagrams of convolutional blocks (CB) and identity blocks (IB) used in the modified SPP module
+
 
 ## References
 <a id="1">[1]</a> 
