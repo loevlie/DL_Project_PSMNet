@@ -17,7 +17,7 @@ Running the code is simplified by use of a python notebook. All that is required
 
 A PSMNet model was developed based on the literature [[1]](#1).  This was used to generate disparity maps and they were tested based on the training L1 loss and validation 3-pixel accuracy.  The PSMNet architecture from [[1]](#1) is shown in Figure 1.  
 
-![](./Images/Architecture_PSMNet.png)*Figure 1: PSMNet Literature Architecture*
+![](./Images/new_psmnet.png)*Figure 1: PSMNet Literature Architecture*
 
 ### Comparison of Results
 We use the 3 pixel disparity error to evaluate our models and compare them against the original PSMNet [[1]](#1)performance.  A comparison of each model’s total number ofparameters used, error on the RGB dataset, and error on the IR dataset can be seen in Table
@@ -29,7 +29,7 @@ We use the 3 pixel disparity error to evaluate our models and compare them again
 | Our Model         | 3.1 mil  | 6.9 %    | 31.2 %   |
 | v1 reduced param  | 2.77 mil | 6.7 %    | 33.3 %   |
 | v2 reduced param  | 2.58 mil | 9.7 %    | 36.8 %   |
-| Final model       | 1.77 mil | -        | 23.7 %   |
+| Final model       | 1.77 mil | 8.4 %    | 23.7 %   |
 #### Disparity error visualization, Top row is the generated disparity map, middle row is the GT,and the last row is the error visualized on the GT
 
 <table>
@@ -56,12 +56,12 @@ Three main modification to the architecture of the model were also tested.
 These modifications to the literature PSMNet model all reached a close final loss/accuracy with the Final model being the one that achieved a higher accuracy then the PSMNet architecture and leading to our decision of proposing that model for the use on IR datasets.  Figures for the changes in loss and accuracy for RGB are shown below in Figure 4 and Figure 5.  Figures for IR are shown in Figure 6 and 7.
              Training                                              |                                        Validation
 :-------------------------:|:-------------------------:
-![L1 Loss](./Images/rgb_loss.png)*Figure 4: L1 Loss Experiments with RGB Images*  |  ![Accuracy](./Images/rgb_acc.png)*Figure 5: 3-pixel Accuracy Experiments with RGB Images*
+![L1 Loss](./Utils/plots/rgb_loss.png)*Figure 4: L1 Loss Experiments with RGB Images*  |  ![Accuracy](./Utils/plots/rgb_acc.png)*Figure 5: 3-pixel Accuracy Experiments with RGB Images*
 
 
 |            Training                                              |                                        Validation|
 :-------------------------:|:-------------------------:
-![L1 Loss](./Images/ir_loss.png)*Figure 6: L1 Loss Experiments with IR Images*  |  ![Accuracy](./Images/ir_acc.png)*Figure 7: 3-pixel Accuracy Experiments with IR Images*
+![L1 Loss](./Utils/plots/ir_loss.png)*Figure 6: L1 Loss Experiments with IR Images*  |  ![Accuracy](./Utils/plots/ir_acc.png)*Figure 7: 3-pixel Accuracy Experiments with IR Images*
 
 
 
@@ -76,21 +76,14 @@ Asymmetric Convolutions                                                         
 # Final Model (SPP Module Modifications)
 Using the insight gained from the aforementioned IR experiments, we redesigned the SPP module of PSMNet using residual blocks as shown in Figure 10 such that performance could be improved on IR images. The modifications described in this section, while tested primarily on IR images, may be applicable to RGB images as well. However, for the sake of this work we consider the architecture’s performance on the more challenging problem of IR disparity estimation.
 
-Similar to PSMNet, we first perform spatial pooling at scales4×4,8×8,16×16, and32×32. Theoutputs of each spatial pooling operation are sent to a convolutional block (CB) whose architecture isprovided in Figure 9a. Specifically CB1 accepts 3 feature maps from the provided image and outputs 32 feature maps. The outputs from CB1 are passed to a series of 4 identity blocks. The design of each identity block (IB) is shown in Figure 11b. Note that the number of feature maps is unchanged by the identity block. The outputs of the identity block are passed through another set of convolutional (CB2) and identity (IB2) blocks. In the figure, CB2 accepts 32 feature maps and outputs 64 maps.  The outputs from each spatial pooling branch are upsampled to a common size, concatenated, and passed through a final set of convolutional and identity modules.  In Figure 10, CB3 takes in 512 feature maps and outputs 128 maps, while CB4 contains 64 filters. The final Conv layer contains 32 filters and performs a convolution with kernel size and stride both set to 1×1.
+Similar to PSMNet, we first perform spatial pooling at scales4×4,8×8,16×16, and32×32. Theoutputs of each spatial pooling operation are sent to a convolutional block (CB) whose architecture isprovided in Figure 11a. Specifically CB1 accepts 3 feature maps from the provided image and outputs 32 feature maps. The outputs from CB1 are passed to a series of 4 identity blocks. The design of each identity block (IB) is shown in Figure 11b. Note that the number of feature maps is unchanged by the identity block. The outputs of the identity block are passed through another set of convolutional (CB2) and identity (IB2) blocks. In the figure, CB2 accepts 32 feature maps and outputs 64 maps.  The outputs from each spatial pooling branch are upsampled to a common size, concatenated, and passed through a final set of convolutional and identity modules.  In Figure 10, CB3 takes in 512 feature maps and outputs 128 maps, while CB4 contains 64 filters. The final Conv layer contains 32 filters and performs a convolution with kernel size and stride both set to 1×1.
 
 ![](./Images/spp_mod.png)*Figure 10: Modified SPP Module*
 
-<table>
-  <tr>
-    <td>Convolutional Block (CB) Diagram: N, M are the number of incoming and outgoing feature maps respectively</td>
-     <td>Identity Block (IB) Diagram: N is the number of incoming feature maps</td>
-  </tr>
-  <tr>
-    <td><img src="./Images/conv_block.png" width=600 height=400></td>
-    <td><img src="./Images/identity_block.png" width=600 height=400></td> 
-  </tr>
- </table>
-Figure 11: Diagrams of convolutional blocks (CB) and identity blocks (IB) used in the modified SPP module
+![](./Images/conv_block.png)*Figure 11a: Convolutional Block (CB) Diagram: N, M are the number of incoming and outgoing feature maps respectively*
+![](./Images/identity_block.png)*Figure 11b: Identity Block (IB) Diagram: N is the number of incoming feature maps*
+
+
 
 ## References
 <a id="1">[1]</a> 
