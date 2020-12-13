@@ -56,12 +56,12 @@ Three main modification to the architecture of the model were also tested.
 These modifications to the literature PSMNet model all reached a close final loss/accuracy with the Final model being the one that achieved a higher accuracy then the PSMNet architecture and leading to our decision of proposing that model for the use on IR datasets.  Figures for the changes in loss and accuracy for RGB are shown below in Figure 4 and Figure 5.  Figures for IR are shown in Figure 6 and 7.
              Training                                              |                                        Validation
 :-------------------------:|:-------------------------:
-![L1 Loss](./Images/rgb_loss.png)*Figure 4: L1 Loss Experiments with RGB Images*  |  ![Accuracy](./Images/rgb_acc.png)*Figure 5: 3-pixel Accuracy Experiments with RGB Images*
+![L1 Loss](./Utils/plots/rgb_loss.png)*Figure 4: L1 Loss Experiments with RGB Images*  |  ![Accuracy](./Utils/plots/rgb_acc.png)*Figure 5: 3-pixel Accuracy Experiments with RGB Images*
 
 
 |            Training                                              |                                        Validation|
 :-------------------------:|:-------------------------:
-![L1 Loss](./Images/ir_loss.png)*Figure 6: L1 Loss Experiments with IR Images*  |  ![Accuracy](./Images/ir_acc.png)*Figure 7: 3-pixel Accuracy Experiments with IR Images*
+![L1 Loss](./Utils/plots/ir_loss.png)*Figure 6: L1 Loss Experiments with IR Images*  |  ![Accuracy](./Utils/plots/ir_acc.png)*Figure 7: 3-pixel Accuracy Experiments with IR Images*
 
 
 
