@@ -3,7 +3,7 @@
 
 ## How to Run the Code
 
-Running the code is simplified by use of a python notebook. All that is required is to run each cell in the [Final Model](Models/Final/Final_Model_IR.ipynb) for IR data and [Final Model](Models/Final/final_model_rgb.ipynb) for RGB data. The training should take about 4 hours for 100 epochs for the final model and 11 and a half hours for the baseline model. The accuracies and model will be saved automatically every 10 epochs.
+Running the code is simplified by use of a python notebook. All that is required is to run each cell in the [Final Model IR](Models/Final/Final_Model_IR.ipynb) for IR data and [Final Model RGB](Models/Final/final_model_rgb.ipynb) for RGB data. The training should take about 4 hours for 100 epochs for the final model and 11 and a half hours for the baseline model. The accuracies and model will be saved automatically every 10 epochs.
 
 ## Model Code
 
