@@ -7,7 +7,7 @@ Running the code is simplified by use of a python notebook. All that is required
 
 ## Model Code
 
-1. [Final Model](Models/Final/psmreimp_ir(1).ipynb)
+1. [Final Model IR](Models/Final/psmreimp_ir(1).ipynb)
 2. [Baseline Model](Models/Baseline/11785_ProjMidterm_Baseline.ipynb)
 3. [Other Modified Model Architectures](Models/Modified/11785_ProjMidterm_Parameter_Reduction.ipynb)
 4. [Utils](Utils/plot_util.py)
