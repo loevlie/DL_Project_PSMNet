@@ -29,7 +29,7 @@ We use the 3 pixel disparity error to evaluate our models and compare them again
 | Our Model         | 3.1 mil  | 6.9 %    | 31.2 %   |
 | v1 reduced param  | 2.77 mil | 6.7 %    | 33.3 %   |
 | v2 reduced param  | 2.58 mil | 9.7 %    | 36.8 %   |
-| Final model       | 1.77 mil | -        | 23.7 %   |
+| Final model       | 1.77 mil | 8.4 %    | 23.7 %   |
 #### Disparity error visualization, Top row is the generated disparity map, middle row is the GT,and the last row is the error visualized on the GT
 
 <table>
