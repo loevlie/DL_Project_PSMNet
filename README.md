@@ -17,7 +17,7 @@ Running the code is simplified by use of a python notebook. All that is required
 
 A PSMNet model was developed based on the literature [[1]](#1).  This was used to generate disparity maps and they were tested based on the training L1 loss and validation 3-pixel accuracy.  The PSMNet architecture from [[1]](#1) is shown in Figure 1.  
 
-![](./Images/Architecture_PSMNet.png)*Figure 1: PSMNet Literature Architecture*
+![](./Images/new_psmnet.png)*Figure 1: PSMNet Literature Architecture*
 
 ### Comparison of Results
 We use the 3 pixel disparity error to evaluate our models and compare them against the original PSMNet [[1]](#1)performance.  A comparison of each model’s total number ofparameters used, error on the RGB dataset, and error on the IR dataset can be seen in Table
