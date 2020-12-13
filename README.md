@@ -50,8 +50,8 @@ We use the 3 pixel disparity error to evaluate our models and compare them again
      <td>Figure 3: Worse Disparity Map</td>
   </tr>
   <tr>
-    <td><img src="./Images/Ref_err.png" width=600 height=400></td>
-    <td><img src="./Images/Model_err.png" width=600 height=400></td> 
+    <td><img src="./Images/lerr.png" width=600 height=400></td>
+    <td><img src="./Images/hierr.png" width=600 height=400></td> 
   </tr>
  </table>
 
