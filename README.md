@@ -78,23 +78,24 @@ These modifications to the literature PSMNet model all reached a close final los
 
 
 
-The asymmetric convolutions idea was based on the paper "Rethinking the Inception Architecture for Computer Vision" [[2]](#2).  The inception paper has shown that for example using a 3x1 convolution followed by a 1x3 convolution is equivalent to sliding a two layer network with the same receptive field as in a 3x3 convolution.  This is shown in Figure 8.  It has been shown in the literature that the asymmetric convolutions are equivilant to sliding a two layer network with the same receptive field as in a 3x3 convolution.  This is illustrated in Figure 8.  The change to the basic block in the PSMNet architecture is shown in figure 9.  
+The asymmetric convolutions idea was based on the paper "Rethinking the Inception Architecture for Computer Vision" [[2]](#2).  The inception paper has shown that for example using a 3x1 convolution followed by a 1x3 convolution is equivalent to sliding a two layer network with the same receptive field as in a 3x3 convolution.  This is shown in Figure 8.  [[2]](#2) has stated that the asymmetric convolutions are equivilant to sliding a two layer network with the same receptive field as in a 3x3 convolution.  This is illustrated in Figure 8.  The change to the basic block in the PSMNet architecture is shown in figure 9.  3D convolutions can be approximated by asymmetric convolutions in a similar manor as shown in figure 10.  
 
 
 Asymmetric Convolutions                                                                                                     |  Change in Basic Block Model Architectures 
 :-------------------------:|:-------------------------:
 ![Spatial Factorization Figure](./Images/Spatial_Factorization.png)*Figure 8: Mini-network replacing the 3x3 convolutions [[2]](#2)*  |  ![Parameter_Reduction Figure](./Images/Parameter_Reduction.png)*Figure 9: Comparison between the original and the modified architecture with asymmetric convolutions*
 
+![](./Images/3DConv.png)*Figure 10: Approximation of 3D convolution with 3 asymmetric convolutions*
 
 # Final Model (SPP Module Modifications)
-Using the insight gained from the aforementioned IR experiments, we redesigned the SPP module of PSMNet using residual blocks as shown in Figure 10 such that performance could be improved on IR images. The modifications described in this section, while tested primarily on IR images, may be applicable to RGB images as well. However, for the sake of this work we consider the architecture’s performance on the more challenging problem of IR disparity estimation.
+Using the insight gained from the aforementioned IR experiments, we redesigned the SPP module of PSMNet using residual blocks as shown in Figure 11 such that performance could be improved on IR images. The modifications described in this section, while tested primarily on IR images, may be applicable to RGB images as well. However, for the sake of this work we consider the architecture’s performance on the more challenging problem of IR disparity estimation.
 
-Similar to PSMNet, we first perform spatial pooling at scales4×4,8×8,16×16, and32×32. Theoutputs of each spatial pooling operation are sent to a convolutional block (CB) whose architecture isprovided in Figure 11a. Specifically CB1 accepts 3 feature maps from the provided image and outputs 32 feature maps. The outputs from CB1 are passed to a series of 4 identity blocks. The design of each identity block (IB) is shown in Figure 11b. Note that the number of feature maps is unchanged by the identity block. The outputs of the identity block are passed through another set of convolutional (CB2) and identity (IB2) blocks. In the figure, CB2 accepts 32 feature maps and outputs 64 maps.  The outputs from each spatial pooling branch are upsampled to a common size, concatenated, and passed through a final set of convolutional and identity modules.  In Figure 10, CB3 takes in 512 feature maps and outputs 128 maps, while CB4 contains 64 filters. The final Conv layer contains 32 filters and performs a convolution with kernel size and stride both set to 1×1.
+Similar to PSMNet, we first perform spatial pooling at scales4×4,8×8,16×16, and32×32. Theoutputs of each spatial pooling operation are sent to a convolutional block (CB) whose architecture isprovided in Figure 12a. Specifically CB1 accepts 3 feature maps from the provided image and outputs 32 feature maps. The outputs from CB1 are passed to a series of 4 identity blocks. The design of each identity block (IB) is shown in Figure 12b. Note that the number of feature maps is unchanged by the identity block. The outputs of the identity block are passed through another set of convolutional (CB2) and identity (IB2) blocks. In the figure, CB2 accepts 32 feature maps and outputs 64 maps.  The outputs from each spatial pooling branch are upsampled to a common size, concatenated, and passed through a final set of convolutional and identity modules.  In Figure 10, CB3 takes in 512 feature maps and outputs 128 maps, while CB4 contains 64 filters. The final Conv layer contains 32 filters and performs a convolution with kernel size and stride both set to 1×1.
 
-![](./Images/spp_mod.png)*Figure 10: Modified SPP Module*
+![](./Images/spp_mod.png)*Figure 11: Modified SPP Module*
 
-![](./Images/conv_block.png)*Figure 11a: Convolutional Block (CB) Diagram: N, M are the number of incoming and outgoing feature maps respectively*
-![](./Images/identity_block.png)*Figure 11b: Identity Block (IB) Diagram: N is the number of incoming feature maps*
+![](./Images/conv_block.png)*Figure 12a: Convolutional Block (CB) Diagram: N, M are the number of incoming and outgoing feature maps respectively*
+![](./Images/identity_block.png)*Figure 12b: Identity Block (IB) Diagram: N is the number of incoming feature maps*
 
 
 
