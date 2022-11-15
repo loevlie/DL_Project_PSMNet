@@ -1,5 +1,6 @@
 
-# Introduction to Deep Learning Project Repo
+# Introduction to Deep Learning Project Repo - [Final Paper](https://github.com/loevlie/DL_Project_PSMNet/blob/main/DL_Final.pdf)
+
 
 ## How to Run the Code
 
